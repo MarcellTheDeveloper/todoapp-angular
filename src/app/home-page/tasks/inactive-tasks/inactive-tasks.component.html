@@ -1,0 +1,7 @@
+<div class="inactiveTasksSection">
+  <hr>
+  <h1>Finished</h1>
+  <mat-list role="list">
+    <app-single-task *ngFor="let task of taskList" [task]="task"></app-single-task>
+  </mat-list>
+</div>

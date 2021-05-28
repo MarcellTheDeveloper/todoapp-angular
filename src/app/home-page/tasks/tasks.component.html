@@ -1,0 +1,17 @@
+<div class="addNewTaskSection">
+  <h1>Add a new task</h1>
+  <input type="text" #taskInput>
+  <div>
+    <button mat-flat-button class="greenButton" (click)="onAddTask()">Add task</button>
+  </div>
+
+</div>
+<hr>
+<app-active-tasks></app-active-tasks>
+<mat-checkbox color="secondary" class="checkbox" [(ngModel)]="checkboxChecked">Show finished tasks</mat-checkbox>
+<div *ngIf="checkboxChecked">
+  <app-inactive-tasks></app-inactive-tasks>
+  <div>
+    <button mat-flat-button color="warn" (click)="onDeleteAllFinishedTasks()">Delete all finished tasks</button>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<div class="activeTasks">
+  <h1>Task list</h1>
+  <mat-list role="list">
+    <app-single-task *ngFor="let task of taskList" [task]="task"></app-single-task>
+  </mat-list>
+</div>

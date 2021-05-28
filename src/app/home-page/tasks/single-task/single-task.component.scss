@@ -1,0 +1,23 @@
+.singleTaskContainer{
+  display: flex;
+  justify-content: flex;
+
+  align-items: center;
+}
+.mat-icon{
+  cursor: pointer;
+}
+.editIcon{
+  color:green;
+}
+
+.saveButton{
+  background-color: green;
+}
+.textLineThrough{
+  text-decoration: line-through;
+}
+input{
+  padding:8px;
+  margin:10px 5px;
+}

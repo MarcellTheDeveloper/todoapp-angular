@@ -1,0 +1,12 @@
+.greenButton{
+  background-color: green;
+}
+input{
+  padding:8px;
+  margin:10px 0px;
+}
+
+
+::ng-deep  .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: grey;
+}

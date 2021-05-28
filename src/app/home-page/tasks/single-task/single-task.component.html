@@ -1,0 +1,12 @@
+<div class="singleTaskContainer">
+  <mat-icon [ngClass]="{editIcon: !task.status}" (click)="onUpdateStatus()"
+    [matTooltip]="task.status ?'Move to finished tasks':'Move to active tasks'">
+    {{task.status? "check_circle_outline"
+    :"check_circle"}} </mat-icon>
+  <input type="text" [(ngModel)]="task.name" [disabled]="taskInputState"
+    [ngStyle]="{textDecoration: lineThroughOrNot()}">
+  <mat-icon class="editIcon" (click)="onUpdateState()" *ngIf="task.status">create</mat-icon>
+  <mat-icon color="warn" (click)="onDeleteTask()" *ngIf="task.status">delete</mat-icon>
+  <button *ngIf="!taskInputState" class="saveButton" mat-flat-button color="primary"
+    (click)="onUpdateTaskName()">Save</button>
+</div>
